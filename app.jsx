@@ -1,23 +1,26 @@
-// JSX >> JS Transpilation
-// props - major component of React
+// Here we create React Steteful component 
+var Hero = React.createClass({
+    getInitialState: function() {
+        return {
+            count: 0
+        };
+    },
 
-// Here we define function than returns JSX elements
-function Hero(props) {
-    // Properties cannot be changed!
-    function handleClick() {
-        props.count += 1;
-        
+    handleClick: function() {
+        this.setState({ count: this.state.count + 1 });
+    },
+
+    render: function() {
+        return (
+            <div className="container">
+                <div className="count">{this.state.count}</div>
+                <img src={this.props.imageURL} onClick={this.handleClick} />
+                <h1>{this.props.title}</h1>
+                <p>{this.props.subtitle}</p>
+            </div>    
+        );
     }
-
-    return (
-        <div className="container">
-            <div className="count">{props.count}</div>
-            <img src={props.imageURL} onClick={handleClick} />
-            <h1>{props.title}</h1>
-            <p>{props.subtitle}</p>
-        </div>
-    );
-}
+});
 
 // ReactDOM.render(React.createElement(Hero, null), document.getElementById('root'));
 ReactDOM.render(
