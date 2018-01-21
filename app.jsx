@@ -1,5 +1,5 @@
 // JSX >> JS Transpilation
-
+// props - major component of React
 
 // Here we define function than returns JSX elements
 function Hero(props) {
