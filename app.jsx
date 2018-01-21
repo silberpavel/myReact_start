@@ -3,9 +3,16 @@
 
 // Here we define function than returns JSX elements
 function Hero(props) {
+    // Properties cannot be changed!
+    function handleClick() {
+        props.count += 1;
+        
+    }
+
     return (
         <div className="container">
-            <img src={props.imageURL} />
+            <div className="count">{props.count}</div>
+            <img src={props.imageURL} onClick={handleClick} />
             <h1>{props.title}</h1>
             <p>{props.subtitle}</p>
         </div>
@@ -18,9 +25,11 @@ ReactDOM.render(
     <div>
         <Hero title="React"
             subtitle="Cool library for user interfaces creation"
-            imageURL="./img/react.png"/>
+            imageURL="./img/react.png"
+            count="0" />
         <Hero title="Angular 2"
             subtitle="One framework"
-            imageURL="https://resoundingechoes.net/wp-content/uploads/angular-logo.png" />
+            imageURL="https://resoundingechoes.net/wp-content/uploads/angular-logo.png"
+            count="0" />
     </div>,
 document.getElementById('root'));
