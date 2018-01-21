@@ -13,7 +13,14 @@ function Hero(props) {
 }
 
 // ReactDOM.render(React.createElement(Hero, null), document.getElementById('root'));
-ReactDOM.render(<Hero title="React"
-                      subtitle="Cool library for user interfaces creation"
-                      imageURL="./img/react.png"/>,
+ReactDOM.render(
+    // if we render more than one element have to be div wrapped.
+    <div>
+        <Hero title="React"
+            subtitle="Cool library for user interfaces creation"
+            imageURL="./img/react.png"/>
+        <Hero title="Angular 2"
+            subtitle="One framework"
+            imageURL="https://resoundingechoes.net/wp-content/uploads/angular-logo.png" />
+    </div>,
 document.getElementById('root'));
