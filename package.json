@@ -1,0 +1,28 @@
+{
+  "name": "myreact_start",
+  "version": "1.0.0",
+  "description": "* lib/ => react.js + react-dom.js + babel-browser.min.js * Import! (when using jsx) text/babel в <script src=\"app.jsx\" type=\"text/babel\"></script> * JSX is very cool. JSX looks like HTML, but it's converted to pure JS.",
+  "main": "app.js",
+  "directories": {
+    "lib": "lib"
+  },
+  "scripts": {
+    "start": "node server.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/silberpavel/myReact_start.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/silberpavel/myReact_start/issues"
+  },
+  "homepage": "https://github.com/silberpavel/myReact_start#readme",
+  "dependencies": {
+    "babel-browser": "^6.1.19",
+    "react": "^16.2.0",
+    "react-dom": "^16.2.0"
+  }
+}
